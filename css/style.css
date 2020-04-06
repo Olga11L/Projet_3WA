@@ -654,6 +654,13 @@
        width:100%;
        padding: 2rem;
    }
+   .header__logo{
+       margin-top:-1em;
+       padding-left: 2em;
+   }
+   .header__nav{
+    height: 10em;
+  }
    .header__a{
     text-align:center;
    }
@@ -673,7 +680,7 @@
       display:block;
   }
   .menu{
-      font-size:30px;
+      font-size:55px;
       cursor:pointer;
       text-align:end;
       color:#fff;
