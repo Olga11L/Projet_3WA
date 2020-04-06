@@ -654,6 +654,38 @@
        width:100%;
        padding: 2rem;
    }
+   .header__a{
+    text-align:center;
+   }
+   .overlay {
+    display:flex;
+    flex-direction:column;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #901E1B;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  .menu,.closebtn{
+      display:block;
+  }
+  .menu{
+      font-size:30px;
+      cursor:pointer;
+      text-align:end;
+      color:#fff;
+  }
+  .overlay .closebtn {
+    position: absolute;
+    top: 0em;
+    right: 1em;
+    font-size: 60px;
+    text-decoration: none;
+    color: white
+  }
   
    .aside{
     display: none;

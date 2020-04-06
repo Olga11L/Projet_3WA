@@ -83,11 +83,11 @@ CREATE TABLE `Categories` (
 
 INSERT INTO `Categories` (`Id`, `Titre`, `Image`) VALUES
 (1, 'Noël', 'Images/noel.jpg'),
-(2, 'Anniversaire', 'Images/anniversaire.jpg'),
+(2, 'Anniversaire', 'images/anniversaire.jpg'),
 (3, 'Classique au  bureau', 'images/classique_au_bureau.jpg'),
 (4, 'Jazz', 'images/jazz.jpg'),
-(5, 'Bande sonore', 'Images/bande-sonore.jpg'),
-(6, 'Rock', 'Images/rock.jpg');
+(5, 'Bande sonore', 'images/bande-sonore.jpg'),
+(6, 'Rock', 'images/rock.jpg');
 
 -- --------------------------------------------------------
 
@@ -194,9 +194,9 @@ CREATE TABLE `Slider` (
 --
 
 INSERT INTO `Slider` (`Id`, `Image`) VALUES
-(1, 'Images/slider1.jpg'),
-(2, 'Images/slider2.jpg'),
-(3, 'Images/slider3.jpg');
+(1, 'images/slider1.jpg'),
+(2, 'images/slider2.jpg'),
+(3, 'images/slider3.jpg');
 
 -- --------------------------------------------------------
 
