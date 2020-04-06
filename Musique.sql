@@ -1,17 +1,25 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Apr 06, 2020 at 12:44 PM
--- Server version: 5.7.26
--- PHP Version: 7.3.8
+-- Host: localhost:3306
+-- Generation Time: Apr 06, 2020 at 10:47 AM
+-- Server version: 5.6.47-cll-lve
+-- PHP Version: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
--- Database: `Musique`
+-- Database: `Playlist`
 --
 
 -- --------------------------------------------------------
@@ -82,10 +90,10 @@ CREATE TABLE `Categories` (
 --
 
 INSERT INTO `Categories` (`Id`, `Titre`, `Image`) VALUES
-(1, 'Noël', 'Images/noel.jpg'),
+(1, 'Noël', 'images/noel.jpg'),
 (2, 'Anniversaire', 'images/anniversaire.jpg'),
 (3, 'Classique au  bureau', 'images/classique_au_bureau.jpg'),
-(4, 'Jazz', 'images/jazz.jpg'),
+(4, 'Jazz', 'images/Jazz.jpg'),
 (5, 'Bande sonore', 'images/bande-sonore.jpg'),
 (6, 'Rock', 'images/rock.jpg');
 
@@ -125,7 +133,6 @@ INSERT INTO `Playlists` (`Id`, `Titre`, `Cat_Id`, `Music`, `Time`) VALUES
 (1, 'Happy New Year', 1, 'Noel/Abba-HappyNewYear.mp3', '04:27'),
 (2, 'It is Beggining to look like Christmas', 1, 'Noel/ItsBeginningToLookLikeChristmas.mp3', '02:46'),
 (3, 'Rockin Around The Christmas Tree', 1, 'Noel/Glee-RockinAroundTheChristmasTree.mp3', '02:37'),
-(4, 'Its the Most Wonderful Time of the \r\n Year', 1, 'Noel/ItstheMostWonderfulTimeoftheYear.mp3', '02:30'),
 (5, 'Jingle Bell Rock', 1, 'Noel/Jingle Bell Rock-.mp3', '02:10'),
 (6, 'Let it Snow', 1, 'Noel/Let it Snow - Michael Buble.mp3', '02:09'),
 (7, 'Little Christmas Tree', 1, 'Noel/Little Christmas Tree - Jackson 5.mp3', '03:39'),
@@ -160,7 +167,7 @@ INSERT INTO `Playlists` (`Id`, `Titre`, `Cat_Id`, `Music`, `Time`) VALUES
 (36, 'Michael Bublé - Sway', 4, 'Jazz/Sway.mp3', '03:08'),
 (37, 'Dave Brubeck - Take Five', 4, 'Jazz/Dave Brubeck, The Dave Brubeck Quartet - Take Five (Audio).mp3', '05:25'),
 (38, 'Duke Ellington & John Coltrane - In a sentimental mood', 4, 'Jazz/Duke Ellington & John Coltrane - In a sentimental mood.mp3', '04:18'),
-(39, 'John Williams - Schindler\\\'s List', 5, 'Film/Schindler s List Soundtrack.mp3', '05:07'),
+(39, 'John Williams - Schindlers List', 5, 'Film/Schindler s List Soundtrack.mp3', '05:07'),
 (41, 'John Williams - The Book Thief', 5, 'Film/The Book Thief OST - 01. One Small Fact .mp3', '01:45\r\n'),
 (42, 'John Williams - Home Alone', 5, 'Film/John Williams - Home Alone Theme.mp3', '04:52'),
 (44, 'Hans Zimmer - Time (Inception)', 5, 'Film/Hans Zimmer - Time (Inception).mp3', '04:34'),
@@ -218,8 +225,8 @@ CREATE TABLE `User` (
 --
 
 INSERT INTO `User` (`Id`, `Nom`, `Prenom`, `Email`, `Pass`, `DateA`) VALUES
-(14, 'Asatryan', 'Olga', 'olga.lehardy@gmail.com', 'kosmos', '2020-03-24'),
-(15, 'Asatryan', 'Olga', 'olga@gmail.com', '123', '2020-03-30');
+(17, 'Lehardy', 'Olga', 'olga.lehardy@gmail.com', '698d51a19d8a121ce581499d7b701668', '2020-04-06'),
+(18, 'Asatryan ', 'Olga', 'olga@gmail.com', '202cb962ac59075b964b07152d234b70', '2020-04-06');
 
 --
 -- Indexes for dumped tables
@@ -293,7 +300,7 @@ ALTER TABLE `Categories`
 -- AUTO_INCREMENT for table `Comment`
 --
 ALTER TABLE `Comment`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `Playlists`
@@ -311,4 +318,9 @@ ALTER TABLE `Slider`
 -- AUTO_INCREMENT for table `User`
 --
 ALTER TABLE `User`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
