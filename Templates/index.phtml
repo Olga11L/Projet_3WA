@@ -1,0 +1,95 @@
+<!--Main Accueil welcome-->
+	<div class="div__welcome">
+	   <div class="container">
+	        <h1 class="welcome__h1">Bienvenue au Muzik</h1>
+            <p class="welcome__p">Muzik est une plateforme simple et riche pour retrouver des albums thématiques, des bandes sonores, artistes et chansons que vous aimez.</p>
+            <ul class="welcome__ul">
+	            <li class="welcome__ul__p">Ici vous trouverez:</li>
+                <li class="welcome__li">L'information détaillée sur des albums, musiciens and chansons</li>
+                <li class="welcome__li">Des revues d'albums et chansons à venir</li>
+                <li class="welcome__li">Des articles thématiques au sujet de vos genres musicaux préférés</li>
+	            <li class="welcome__li li_last">Des classements d'albums recommandés avec les différents artistes et discographie associée</li>
+	        </ul>
+	    </div>
+	</div>
+<!-- Fin Main Accueil welcome-->
+
+<!-- Main Accueil Playlist-->
+	<div class="container">
+		<h1 class="playlist__h1">Playlists</h1>
+		<div class="main__playlist">
+			<?php foreach($cats as $cat): ?> 
+			    <div class="playlist__div">
+			<?php if(!isset($_SESSION['user'])){?>
+			    <a class="playlist__a" href="./inscription">
+			        <img class="playlist__image" src="<?php echo $cat['Image']?>" alt="">	
+			        <p class="playlist__p"><?php echo $cat['Titre']?></p>
+			    </a>
+			<?php }else{ ?>
+			    <a class="playlist__a" href="music-<?php echo get_url_text($cat['Titre'])?>-<?php echo $cat['Id']?>">
+			        <img class="playlist__image" src="<?php echo $cat['Image']?>" alt="">	
+			        <p class="playlist__p"><?php echo $cat['Titre']?></p>
+			    </a>
+            <?php } ?>
+			    </div>
+			<?php endforeach;?>	
+		</div>
+<!-- Fin  Main Accueil Playlist-->		
+
+<!-- Main Accueil Circle-->
+		<div class="main__div container">
+			<div class="circle">
+			    <div class="main__circle">
+			        <i class="fa main__i fa-graduation-cap"></i>
+			    </div>
+			    <h1 class="main__h1">Expérience</h1>
+			    <p class="main__p">Depuis de nombreuses années nous suivons des blogs et l'actualité des artistes des plus variés. Ainsi nous apportons ici un condensé riche d'informations utiles et un résumé des meilleurs pistes musicales pour animer vos soirées les plus originales.</p>
+			</div>
+		    <div class="circle">
+			    <div class="main__circle">
+				    <i class="fa main__i fa-play-circle"></i>
+			    </div>
+		        <h1 class="main__h1">Librairie</h1>
+			    <p class="main__p">Composée des meilleurs labels Français et étrangers, notre librairie musicale vous propose plusieurs dizaine de titres de qualité ainsi que la création ou l'adaptation sur mesure dans tous les styles musicaux.</p>
+			</div>
+			<div class="circle">
+			    <div class="main__circle">
+				    <i class="fa main__i fa-user"></i>
+			    </div>
+			    <h1 class="main__h1">Équipe</h1>
+			    <p class="main__p">Toujours plus proches et attentives, nos équipes vous apportent conseils et recherches pertinentes et adaptées à la mise en musique de vos productions.</p>
+		    </div>	
+		</div>
+<!-- Fin Main Accueil Circle-->
+
+<!-- Main Accueil Slider-->
+		<div class="slideshow"> 
+	        <?php foreach($slides as $slide): ?>  
+	            <div class="mySlides">
+			        <img class="slide__image" src="<?php echo $slide['Image']?>" alt="">
+		        </div>
+			<?php endforeach;?>	
+		</div>
+	    <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+<!-- Fin Main Accueil Slider-->        
+
+<!-- Main Accueil Blog-->
+		<h1 class="playlist__h1">Blog</h1>
+		<div class="main__blog">
+			<?php foreach($blogs as $blog): ?> 
+			    <div class="blog__div">
+			        <a class="playlist__a" href="blog-<?php echo $blog['Id']?>">
+			            <div><img class="blog__image" src="<?php echo $blog['Image']?>" alt=""></div>
+			            <p class="blog__p"><?php echo $blog['Titre']?></p>
+			        </a>
+			    </div>
+			<?php endforeach;?>	
+		   
+		</div>
+	</div>
+<!--Fin  Main Accueil Blog-->
+

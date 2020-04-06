@@ -1,0 +1,21 @@
+<!--Main-->
+<main class="container">
+	<h1 class="playlist__h1">Playlists</h1>
+	<div class="main__playlist">
+		<?php foreach($cats as $cat): ?> 
+			<div class="playlist__div">
+		<?php if(!isset($_SESSION['user'])){?>
+			<a class="playlist__a" href="./inscription">
+			    <img class="playlist__image" src="<?php echo $cat['Image']?>" alt="">	
+			    <p class="playlist__p"><?php echo $cat['Titre']?></p>
+			</a>
+		<?php }else{ ?>
+			<a class="playlist__a" href="music-<?php echo get_url_text($cat['Titre'])?>-<?php echo $cat['Id']?>">
+			    <img class="playlist__image" src="<?php echo $cat['Image']?>" alt="">	
+			    <p class="playlist__p"><?php echo $cat['Titre']?></p>
+			</a>
+        <?php } ?>
+			</div>
+		<?php endforeach;?>	
+	</div>
+</main>

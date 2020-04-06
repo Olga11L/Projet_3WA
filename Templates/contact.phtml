@@ -1,0 +1,28 @@
+
+
+	<!--Slider-->
+	
+	<!--Main-->
+	<main class="background ">
+	    <h1 class="contact__h1 container">formulaire de contact</h1>
+	    <form method="POST" class="contact__form container">                                        
+            <input required type="text" class="contact__prenom" name="Prenom" placeholder="Prénom *">
+		    <input required type="email" class="contact__email" name="Email" placeholder="Email *">
+		    <input required type="text" class="contact__sujet" name="Sujet" placeholder="Sujet *">
+		    <textarea class="contact__message" name="Message" placeholder="Message *" cols="30" rows="15"></textarea>
+            <button class="contact__button" type="submit"  name="envoyer">Envoyer</button>
+		</form>
+	    <br>
+        <div class="contact__form reponse">
+		    <?php
+		        if(isset($msg))
+		    {
+			    echo '<i class="fa fa-check-circle"></i>    '.$msg;
+		    }		
+		    ?> 
+		</div>
+	
+
+	</main>
+	
+

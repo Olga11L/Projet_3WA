@@ -1,0 +1,667 @@
+/*.........................................................................................................................................................................................
+                                                                                General
+...........................................................................................................................................................................................*/
+
+* {
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*.........................................................................................................................................................................................
+                                                                          Header
+...........................................................................................................................................................................................*/
+
+.header{
+	background-color: #901E1B;
+}
+.nav__connexion{
+    display:flex;
+    justify-content: flex-end;
+    background-color: #ffffff;
+}
+.nav__a{
+    padding: 0 1rem 1rem ;
+    text-decoration: none;
+    color:#901E1B;
+    transform: scale(1);
+}
+.nav__a:hover{
+    transform: scale(1.15);
+}
+.header__nav{
+	display:flex;
+    justify-content: space-between; 
+}
+.header__a{
+    padding: 3em 5em;
+    text-decoration: none;
+    color:#ffffff; 
+    transform: scale(1);
+}
+.header__a:hover{
+    transform: scale(1.15);
+}
+.header__i{
+    display:block;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+	color:#ffffff; 
+}
+.menu,.closebtn{
+    display:none;
+}
+.overlay{
+    display:flex;
+    justify-content:space-between;
+}
+/*.........................................................................................................................................................................................
+                                                                          Main Accueil
+.....................................................................................................................................................*/
+
+.div__welcome{
+   background-image: url("../images/example.png");
+}
+.welcome__h1{
+    margin-top: 0em;
+    padding-top:0.5em;
+    font-size:4em; 
+    text-align: center;
+    color:#901E1B;   
+}
+.welcome__p{
+    padding: 0 2em;
+    font-size:2em;
+}
+.welcome__li{
+    line-height: 2em;
+    font-size:1.3em;
+    color:black;
+}
+.welcome__li:hover{
+    color:#901e1b;
+}
+.li_last{
+    padding-bottom: 0.5rem;
+}
+.welcome__ul{
+    padding: 0 0 0 10rem;
+}
+.welcome__ul__p{
+    padding:1em 4em;
+    list-style:none;
+    font-weight: bold;
+    font-size:1.5em;
+    color:#901E1B;
+}
+
+/*.........................................................................................................................................................................................
+                                                                          Playlist
+.....................................................................................................................................................*/
+.playlist__h1{
+    padding: 0.5em;
+    text-align:center;
+}
+
+.main__playlist{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.playlist__div{
+    transform: scale(1);
+}
+.playlist__div:hover{
+    transform:scale(1.15);
+}
+
+.playlist__a{
+    text-decoration: none;
+    color: black;
+}
+.playlist__a:hover{
+    color:#901E1B;
+}
+.playlist__image{
+    margin:1em 0 0 0;
+    width:23em;
+    height:15em;
+}
+.playlist__p,.blog__p{
+    width:21em;
+    text-align:center;
+
+}
+/*...................................................................................................................
+                                                 Main-Circle
+........................................................................................................................*/
+
+.main__div{
+    display:flex;
+    justify-content: space-between;
+}
+.circle{
+    margin-top:2em;
+    width:100%;
+}
+.main__circle{
+    margin: 2em auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: #8F1E1B;
+    text-align: center;
+}
+.main__i{
+    margin:0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 100px;
+    font-size: 3rem;
+    text-align: center;
+    color:#ffffff;
+}
+.main__h1{
+    text-align: center;
+}
+.main__p{
+    margin:0em 2em;
+    text-align: center;
+}
+/*.......................................................................................................................
+                                                                   Slider
+..........................................................................................................................*/
+.slideshow{
+    margin:3em 0;
+    position: relative;
+}
+.mySlides {  
+    display: none ; 
+}  
+.slide__image {  
+    width:100%;
+    height:40em;
+}
+.dots{
+    text-align: center;
+}
+.dot {
+    margin: 0 2px;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+/*.........................................................................................................................................................................................
+                                                                          Blog
+.....................................................................................................................................................*/
+.main__blog{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.blog__div:hover{
+    transform: scale(1.15);
+    color:#901E1B;
+}
+.blog__h1{
+    text-align: center;
+}
+.blog__image{
+    margin:1em 0 0 0;
+    width:23em;
+    height:15em;
+}
+/*.........................................................................................................................................................................................
+                                                                       Footer
+..................................................................................................................................................*/
+.footer{
+    margin-top:2em;
+    background-color: rgb(143, 32, 29);
+}
+.footer__div{
+    padding:0.3em;
+    text-align: center;
+}
+.footer__fa{
+    width: 3em;
+    height: 3em;
+    margin: 0em 1em;
+    padding:1em;
+    border-radius: 3em;
+    font-size:1.1em;
+    background: #fff;
+    text-align: center;
+    color:#8F1E1B;
+}
+.footer__fa:hover{
+    color:#000;
+}
+
+/*.........................................................................................................................................................................................
+                                                                          Contact-Page
+...........................................................................................................................................................................................*/
+.background{
+    background-image: url("../images/example.png");
+}
+.contact__h1{
+    padding:1em;
+    width:100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contact__form{
+    margin:0 auto;
+    width:30em;
+}
+.contact__prenom, .contact__email, .contact__sujet, .contact__message{
+    padding:1em;
+    border-radius:1em;
+    border: 1px solid #ccc;
+}
+.contact__sujet, .contact__message{
+    display: block;
+    width:100%;
+}
+.contact__prenom {
+    margin: 0 2em 2em 0;
+    display: inline-block;
+    width:47%;
+}
+.contact__email{
+    display: inline-block;
+    width:47%;
+}
+.contact__message{
+    display: block;
+    margin: 2em 0;
+}
+.contact__button{
+    border: 0.2em solid #8F1E1B; 
+    color:#8F1E1B; 
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+}
+.reponse{
+    padding: 0 0 2em 0;
+    font-size:1.2em;
+}
+.fa-check-circle{
+    padding-top:0.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50px;
+    background: #8F1E1B;
+    text-align: center;
+    color: white;
+}
+
+/*.........................................................................................................................................................................................
+                                                                          connexion-Page
+...........................................................................................................................................................................................*/
+.login__h1{
+    font-size:1.5em;
+    text-transform: uppercase;
+}
+.login__fa{
+    margin:1em;
+    font-size:0.5em;
+    border: 1em solid #8F1E1B;
+    color:white;
+    background-color: #8F1E1B; 
+}
+.login__form{
+    border:1px solid grey;
+}
+.login__ul{
+    list-style-type: none;
+}
+.login__li{
+    display:flex;
+    flex-direction: column;
+}
+.login__label{
+    margin:1em 0;
+}
+.login__input{
+    margin-right:4em;
+    padding:1em;
+    border:1px solid grey;
+}
+.login__button{
+    margin:1em 0 2em 3em;
+    padding: 15px 32px;
+    border: 2px solid #8F1E1B;
+    border-radius: 12px;
+    color:#8F1E1B;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+.login__button:hover {
+    background-color: #8F1E1B;
+    color: white;
+  }
+  /*.........................................................................................................................................................................................
+                                                                        BLOG-PAGE
+...........................................................................................................................................................................................*/
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.blog__h1{
+    padding: 0.6em;
+    text-align: start;
+}
+.main__auteur{
+    display:flex;
+}
+.main__auteur__p{
+    margin:0 1em 1em 1em;
+    font-size: 0.8em;
+}
+.main__auteur__image{
+    width:40em;
+}
+.main__text{
+    margin-bottom: 1em;
+}
+.main__href{
+    padding:0.5em;
+    text-decoration: none;
+    color: #901E1B;
+}
+.blog{
+    margin-right:6em;
+}
+
+.asideplaylist__image{
+    width:15em;
+}
+.asideplaylist__h1{
+    text-align: center;
+}
+
+/*.........................................................................................................................................................................................
+                                                                    Blog - Page -Comments form
+.....................................................................................................................*/
+.input__name{
+    margin: 2em 0;
+    padding:1em;
+    width:100%;
+} 
+.textarea__comment{
+    width:100%;
+    padding:1em
+}
+.input__btn{
+  margin-top: 1em;
+  padding: 1em 4em;
+  font-size:1em;
+  border: 0.1em solid #901E1B;
+  color: #901E1B;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.comment__user{
+    width: 3em;
+    height: 3em;
+    margin: 0em 1em;
+    padding:1em;
+    border-radius: 3em;
+    font-size:1.1em;
+    background: #C3C3C3;
+    text-align: center;
+    color:#FFF;
+}
+.comment__date{
+    margin:0 0 0 6em;
+    font-size: 0.7em;
+}
+.comment__text{
+    margin:1em 4em;
+
+}
+.comment__a{
+  text-decoration: none;
+  color:#000;
+}
+.comment__suprimer{
+    text-align: end;
+}
+/*.........................................................................................................................................................................................
+                                                                          Player_ Page
+...........................................................................................................................................................................................*/
+.playlist{
+    background-image: url("../images/example.png");
+}
+.player{
+    padding:0 20em;
+}
+.playlist__titre{
+    margin-top: 0;
+    padding-top: 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.playing__titre{
+    padding-bottom:1em;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: #8F1E1B;
+}
+.audio{
+    width: 450px;
+    height: 32px;
+    margin-left:23em;
+}
+.player__playlist{
+    display:flex;
+    flex-direction: row;
+}
+.player__playlist:hover{
+  color:#8F1E1B;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.player__numero{
+    margin: 1em;
+}
+.player__titre{
+    margin:1em;
+}
+.titre{
+    width:30em;
+}
+
+/*.........................................................................................................................................................................................
+                                                         Mobile
+..................................................................................................................................................*/
+
+@media only screen and (max-width: 480px) {
+
+/*....................................................
+             General
+......................................................*/
+
+.container{ 
+    width: 100%;
+    padding: 2rem;
+}
+ 
+/*..............................................
+      header
+...............................................*/
+
+.logo{
+    padding: 0 2em;
+}
+.header__a{
+    padding:2rem;
+    text-align: center;
+}
+.header__i{
+    display:none;
+}
+.overlay {
+  display:flex;
+  flex-direction:column;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #901E1B;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.menu,.closebtn{
+    display:block;
+}
+.menu{
+    font-size:30px;
+    cursor:pointer;
+    text-align:end;
+    color:#fff;
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 0em;
+  right: 1em;
+  font-size: 60px;
+  text-decoration: none;
+  color: white
+}
+
+/*..............................................
+      Main Accueil
+...............................................*/
+.welcome__h1{
+    font-size: 3em;
+}
+.welcome__p{
+    font-size: 1em;
+    line-height: 1.5em;
+}
+.welcome__ul {
+    padding:0em 3em;
+}
+.welcome__ul__p{
+    padding:1em 0;
+    text-align: center;
+}
+.welcome__li{
+    padding: 0em;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+/*..............................................
+      Main Playlist
+...............................................*/
+
+.playlist__div, .playlist__p{
+    width:100%
+}
+.playlist__div{
+    text-align: center;
+}
+.playlist__image, .blog__image{
+    width:100%;
+}
+/*..............................................
+      Main Circle
+...............................................*/
+
+
+.main__div{
+    flex-direction: column;
+}
+
+/*..............................................
+     Slider
+...............................................*/
+
+.slideshow, .dots{
+    display: none;
+}
+
+/*..............................................
+    Blog-Page
+...............................................*/
+
+.blog__p, .blog__div{
+    text-align: center;
+    width:100%;
+}
+.aside{
+    display: none;
+}
+.main__auteur__image {
+    width: 100%;
+}
+.main__p{
+    margin:0em;
+}
+.blog{
+    margin-right: 0em;
+}
+
+/*..............................................
+   Playlist-page
+...............................................*/
+.audio{
+    width:100%;
+    margin-left: 0em;
+}
+.player{
+    padding:0em;
+}
+
+/*..............................................
+   Contact-page
+...............................................*/
+
+.contact__prenom, .contact__email{
+    width:100%;
+}
+.contact__sujet{
+    margin-top: 1rem;
+}
+}
+
+/*.........................................................................................................................................................................................
+                                                         Tablette
+..................................................................................................................................................*/
+
+@media screen and (min-width: 480px) and (max-width: 960px)  {
+   .container{
+       width:100%;
+       padding: 2rem;
+   }
+  
+   .aside{
+    display: none;
+}
+  .audio{
+    margin-left: 13em;
+}
+ .player{
+    padding:0em 11em;
+}
+}

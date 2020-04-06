@@ -1,0 +1,20 @@
+
+<main class="playlist">
+	<div class="container">
+		<h1 class="playlist__titre"><?php echo $_GET['Titre'];?></h1>
+		<div class="playing__titre" id="titre"></div>
+		<audio class="audio" id="audioPlayer" controls>
+		</audio>
+		    <div class="player"> 
+			    <?php foreach($musics as $music): ?>
+				    <div  class="player__playlist">
+			            <p class="player__signe" onclick="change_music('Audio/<?php echo $music['Music']?>','<?php echo $music['Titre']?>'); "><i class="fa fa-play-circle"></i></p>
+			            <div class="titre">
+							<p class="player__titre" onclick="change_music('Audio/<?php echo $music['Music']?>','<?php echo $music['Titre']?>');"><?php echo $music['Titre']?></p>
+			            </div>
+			            <p class="player__time"><?php echo $music['Time']?></p>
+			        </div>
+			    <?php endforeach;?>
+			</div>
+    </div>
+</main>

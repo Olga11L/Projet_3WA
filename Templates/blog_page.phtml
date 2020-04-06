@@ -1,0 +1,86 @@
+<!--Main-->
+<main class="container main">
+	<section class="blog">
+       <h1 class="main__h1"><?php echo $blogs['Titre']?></h1>
+        <div class="main__auteur">
+            <p class="main__auteur__p"><?php echo $blogs['Auteur']?></p>
+            <p class="main__auteur__p"><?php echo $blogs['Date_A']?></p>
+        </div>
+        <img class="main__auteur__image" src="<?php echo $blogs['Image']?>" alt="">
+        <?php echo $blogPages['Details']?>
+    </section>
+    <aside class="aside">
+        <h1 class="main__h1">Consultez notre playlists</h1>
+        <div class="aside__playlist">
+            <?php foreach($cats as $cat):  if(!isset($_SESSION['user'])){?>
+                <a class="playlist__a" href="./inscription">
+                    <img class="asideplaylist__image" src="<?php echo $cat['Image']?>" alt="">	
+                    <h1 class="asideplaylist__h1"><?php echo $cat['Titre']?></h1>
+                </a>
+            <?php }else{ ?>
+                <a class="playlist__a" href="music-<?php echo get_url_text($cat['Titre'])?>-<?php echo $cat['Id']?>">
+                    <img class="asideplaylist__image" src="<?php echo $cat['Image']?>" alt="">	
+                    <h1 class="asideplaylist__h1"><?php echo $cat['Titre']?></h1>
+                </a>
+            <?php }  endforeach;?>
+        </div>
+    </aside>
+</main>
+                            
+    <div class="container">
+        <h2>Laisser un commentaire</h2>
+        <form method="POST" id="comment_form">
+            <input type="hidden" id="IdBlog" name="Id" value="<?= (int) $_GET['Id']; ?>">
+            <div class="form__name">
+                <input  required type="text" name="comment_name" id="comment_name" class="input__name" placeholder="Prénom" />
+            </div>
+            <div class="form__comment">
+                <textarea required  name="comment_content" id="comment_content" class="textarea__comment" placeholder="Votre Commentaire" rows="5"></textarea>
+            </div>
+            <div class="form-button">
+                <input type="submit" name="submit" id="submit" class="input__btn" value="Comment" />
+            </div>
+        </form>
+        <div id="display_comment"></div>
+    </div>
+                
+    <script>
+        $(document).ready(function(){
+            $('#comment_form').on('submit', function(event){
+            event.preventDefault();
+            var form_data = $(this).serialize();
+                $.ajax({
+                    url:"add_comment.php",
+                    method:"POST",
+                    data:form_data,
+                    dataType:"JSON",
+                    success:function(data)
+                    {
+                    if(data.error != ' ')
+                        {
+                            $('#comment_form')[0].reset();
+                            $('#comment_message').html(data.error);
+                            load_comment();
+                        }
+                    }
+                })
+            });
+            load_comment();
+                        
+            function load_comment()
+            {
+                $.ajax({
+                    url:"fetch_comment.php",
+                    method:"POST",
+                    data: {id : $("#IdBlog").val()},
+                    success:function(data)
+                    {
+                        $('#display_comment').html(data);
+                    }
+                })
+            }
+        });
+    </script>
+                        
+                        
+                        

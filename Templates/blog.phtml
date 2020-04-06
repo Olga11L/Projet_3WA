@@ -1,0 +1,34 @@
+<!--Main-->
+	<main class="container main">
+		<section class="blog">
+		    <?php foreach($blogs as $blog): ?> 
+			    <h1 class="main__h1"><?php echo $blog['Titre']?></h1>
+			    <div class="main__auteur">
+			        <p class="main__auteur__p"><?php echo $blog['Auteur']?></p>
+			        <p class="main__auteur__p"><?php echo $blog['Date_A']?></p>
+		        </div>
+			    <img class="main__auteur__image" src="<?php echo $blog['Image']?>" alt="">
+			    <p class="main__text"><?php echo $blog['Description']?></p>
+			    <a  class="main__href" href="blog-<?php echo $blog['Id']?>">Continuer la lecture</a>
+			<?php endforeach;?>	
+		</section>
+	
+		<aside class="aside">
+			<h1 class="main__h1">Consultez notre playlists</h1>
+			<div class="aside__playlist">
+			    <?php foreach($cats as $cat): if(!isset($_SESSION['user'])){?>
+			        <a class="playlist__a" href="./inscription">
+                        <img class="asideplaylist__image" src="<?php echo $cat['Image']?>" alt="">	
+			            <h1 class="asideplaylist__h1"><?php echo $cat['Titre']?></h1>
+			        </a>
+			    <?php }else{ ?>
+			        <a class="playlist__a" href="playlist-<?php echo get_url_text($cat['Titre'])?>-<?php echo $cat['Id']?>">
+			            <img class="asideplaylist__image" src="<?php echo $cat['Image']?>" alt="">	
+			            <h1 class="asideplaylist__h1"><?php echo $cat['Titre']?></h1>
+			        </a>
+                <?php } endforeach;?>
+			</div>
+
+		</aside>	
+		
+	</main>
