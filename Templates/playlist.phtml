@@ -7,12 +7,12 @@
 		<?php if(!isset($_SESSION['user'])){?>
 			<a class="playlist__a" href="./inscription">
 			    <img class="playlist__image" src="<?php echo $cat['Image']?>" alt="">	
-			    <p class="playlist__p"><?php echo $cat['Titre']?></p>
+			    <h2 class="playlist__h2"><?php echo $cat['Titre']?></h2>
 			</a>
 		<?php }else{ ?>
 			<a class="playlist__a" href="music-<?php echo get_url_text($cat['Titre'])?>-<?php echo $cat['Id']?>">
 			    <img class="playlist__image" src="<?php echo $cat['Image']?>" alt="">	
-			    <p class="playlist__p"><?php echo $cat['Titre']?></p>
+			    <h2 class="playlist__p"><?php echo $cat['Titre']?></h2>
 			</a>
         <?php } ?>
 			</div>
