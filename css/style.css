@@ -703,4 +703,10 @@
  .player{
     padding:0em 11em;
 }
+.contact__prenom, .contact__email{
+    width:100%;
+}
+.contact__sujet{
+    margin-top: 1rem;
+}
 }
