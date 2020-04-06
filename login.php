@@ -6,7 +6,7 @@ include('database/redirecting.php') ;
 
         $query='SELECT * FROM User WHERE Email=? AND Pass=?';
         $resultSet = $pdo->prepare($query);
-        $resultSet->execute([$_POST['Email'],$_POST['Pass']]);
+        $resultSet->execute([$_POST['Email'],md5($_POST['Pass'])]);
         $user = $resultSet->fetch(); 
 
         if(isset($user['Id'])){

@@ -12,7 +12,7 @@ VALUES
 (?,?,?,?,NOW())
 ';
 $resultSet=$pdo->prepare($query);
-$resultSet->execute([$_POST['Nom'],$_POST['Prenom'],$_POST['Email'],$_POST['Pass']]);
+$resultSet->execute([$_POST['Nom'],$_POST['Prenom'],$_POST['Email'],md5($_POST['Pass'])]);
 header('location:./connexion');
 }
 
