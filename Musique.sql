@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 06, 2020 at 10:47 AM
+-- Generation Time: Apr 08, 2020 at 02:20 PM
 -- Server version: 5.6.47-cll-lve
 -- PHP Version: 7.2.7
 
@@ -110,6 +110,13 @@ CREATE TABLE `Comment` (
   `Comment_sender_name` varchar(255) NOT NULL,
   `Date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Comment`
+--
+
+INSERT INTO `Comment` (`Id`, `Blog_Id`, `Comment_text`, `Comment_sender_name`, `Date`) VALUES
+(36, 1, 'La musique agit directement sur notre corps. L’écouter nous fait plaisir, nous stimule. Plusieurs études ont observé les effets qu’a la musique sur le cerveau humain.', 'Olga', '2020-04-06');
 
 -- --------------------------------------------------------
 
@@ -300,7 +307,7 @@ ALTER TABLE `Categories`
 -- AUTO_INCREMENT for table `Comment`
 --
 ALTER TABLE `Comment`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `Playlists`
