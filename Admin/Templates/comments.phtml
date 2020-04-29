@@ -1,0 +1,23 @@
+<h1>Liste des commentaires</h1>
+<table  class="table">
+    <thead>
+        <tr>
+            <th class="">Id</th>
+            <th class="">Comment</th>
+            <th class="">Autheur</th>
+            <th class="">Date</th>
+            <th class="">Option</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($comentaires as $comentaire): ?>  
+        <tr>
+            <td><?php echo $comentaire['Id']?></td>
+            <td class="comment_text"><?php echo $comentaire['Comment_text']?></td>
+            <td><?php echo $comentaire['Comment_sender_name']?></td>
+            <td><?php echo $comentaire['Date']?></td>
+            <td><a href="comments.php?del=<?php echo $comentaire['Id']?>" class="btn__supprimer"><i class="fa fa-trash" ></i> Supprimer</a></td>
+        </tr>
+    <?php endforeach;?>
+    </tbody>
+</table>

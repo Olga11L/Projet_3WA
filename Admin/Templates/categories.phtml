@@ -1,0 +1,23 @@
+<h1>Liste des catégories</h1>
+<table  class="table">
+    <thead>
+        <tr>
+            <th class="">Id</th>
+            <th class="">Titre</th>
+            <th class="">Image</th>
+            <th class="">Option</th>
+            <th class="">Option</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($cats as $cat): ?>  
+        <tr>
+            <td><?php echo $cat['Id']?></td>
+            <td><?php echo $cat['Titre']?></td>
+            <td><img class="cat__image" src="../<?php echo $cat['Image']?>" alt=""></td>
+            <td><a href="categories.php?del=<?php echo $cat['Id']?>" class="btn__supprimer"><i class="fa fa-trash" ></i> Supprimer</a></td>
+            <td><a href="modifier.php?mod=<?php echo $cat['Id']?>" class="btn__modifier"><i class="fa fa-edit" ></i> Modifier</a></td>
+        </tr>
+    <?php endforeach;?>
+    </tbody>
+</table>

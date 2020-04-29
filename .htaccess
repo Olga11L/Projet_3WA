@@ -12,3 +12,7 @@ RewriteRule inscription signin.php
 RewriteRule logout logout.php
 RewriteRule music-([a-z0-9\-]+)-([0-9]+) music.php?Id=$2&Titre=$1 [L]
 RewriteRule blog-([0-9]+) blog_page.php?Id=$1 [L]
+
+
+php_value upload_max_filesize    110M
+php_value post_max_size          120M

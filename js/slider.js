@@ -1,25 +1,25 @@
 
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideList = 1;
+showAllSlides(slideList);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showAllSlides(slideList += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showAllSlides(slideList = n);
 }
 
-function showSlides(n) {
+function showAllSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.getElementsByClassName("slideshow__div");
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {
-    slideIndex = 1;
+    slideList = 1;
   }
 
   if (n < 1) {
-    slideIndex = slides.length;
+    slide = slides.length;
   }
 
   for (i = 0; i < slides.length; i++) {
@@ -29,12 +29,12 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
 }
-  slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
+  slides[slideList-1].style.display = "block";
+dots[slideList-1].className += " active";
 }
 
 window.addEventListener("load",function() {
-  showSlides(slideIndex);
+  showAllSlides(slideList);
   myTimer = setInterval(function(){plusSlides(1)}, 4000);
 })
 

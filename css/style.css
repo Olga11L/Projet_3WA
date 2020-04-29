@@ -9,6 +9,10 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+.body{
+    font-family: 'Open Sans', sans-serif;
+
+}
 /*.........................................................................................................................................................................................
                                                                           Header
 ...........................................................................................................................................................................................*/
@@ -50,10 +54,10 @@
     text-align: center;
 	color:#ffffff; 
 }
-.menu,.closebtn{
+.menuOpen,.closebutton{
     display:none;
 }
-.overlay{
+.menu{
     display:flex;
     justify-content:space-between;
 }
@@ -178,7 +182,7 @@
     margin:3em 0;
     position: relative;
 }
-.mySlides {  
+.slideshow__div {  
     display: none ; 
 }  
 .slide__image {  
@@ -523,7 +527,7 @@
 .header__i{
     display:none;
 }
-.overlay {
+.menu {
   display:flex;
   flex-direction:column;
   width: 0;
@@ -535,16 +539,16 @@
   overflow-x: hidden;
   transition: 0.5s;
 }
-.menu,.closebtn{
+.menuOpen,.closebutton{
     display:block;
 }
-.menu{
+.menuOpen{
     font-size:30px;
     cursor:pointer;
     text-align:end;
     color:#fff;
 }
-.overlay .closebtn {
+.menu .closebutton {
   position: absolute;
   top: 0em;
   right: 1em;
@@ -669,7 +673,7 @@
    .header__a{
     text-align:center;
    }
-   .overlay {
+   .menu {
     display:flex;
     flex-direction:column;
     width: 0;
@@ -681,16 +685,16 @@
     overflow-x: hidden;
     transition: 0.5s;
   }
-  .menu,.closebtn{
+  .menuOpen,.closebutton{
       display:block;
   }
-  .menu{
+  .menuOpen{
       font-size:55px;
       cursor:pointer;
       text-align:end;
       color:#fff;
   }
-  .overlay .closebtn {
+  .menu .closebutton {
     position: absolute;
     top: 0em;
     right: 1em;

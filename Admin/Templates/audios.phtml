@@ -1,0 +1,21 @@
+<h1>Liste des audios</h1>
+<table  class="table">
+    <thead>
+        <tr>
+            <th class="">Id</th>
+            <th class="">Titre</th>
+            <th class="">Time</th>
+            <th class="">Option</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($musics as $music): ?>  
+        <tr>
+            <td><?php echo $music['Id']?></td>
+            <td><?php echo $music['Titre']?></td>
+            <td><?php echo $music['Time']?></td>
+            <td><a href="audios.php?del=<?php echo $music['Id']?>" class="btn__supprimer"><i class="fa fa-trash" ></i> Supprimer</a></td>
+        </tr>
+    <?php endforeach;?>
+    </tbody>
+</table>

@@ -14,6 +14,8 @@ Make sure you have customized your mysql connection credentials.
 
 To view a live demo, please go to  <https://olgalehardy.com/Projet_3WA/accueil>
 
+For the page of Admin <https://olgalehardy.com/Projet_3WA/Admin/login.php>
+
 
 
 
