@@ -2,11 +2,11 @@
 <form method="POST" class="" enctype="multipart/form-data">
     <div class="add_categorie">
         <div class="cat_titre">
-        <label class="" for="">Titre</label>
+        <label>Titre</label>
             <input type="text" class="input__titre" name="titre">
         </div>
         <div class="cat_titre">
-        <label class="" for="">Catégorie</label>
+        <label>Catégorie</label>
             <select type="text" class="select_cat"  name="Cat_Id" >
                 <?php foreach($cats as $cat): ?> 
                     <option value="<?php echo $cat['Id']?>"><?php echo $cat['Titre']?> </option>
@@ -17,7 +17,7 @@
             Music: <input type="file" class="input__image" name="audio">
         </div>
         <div class="cat_titre">
-        <label class="" for="">Time</label>
+        <label>Time</label>
             <input type="text" class="input__image" name="time">
         </div>
         <button type="submit" name="Ajouter" class="btn_ajouter">Ajouter</button>
